@@ -2,11 +2,11 @@
 
 ### Summary
 
-Tired of manually renaming variables after pasting code snippets? **WIRL** is an intelligent "Code Wiring" assistant powered by LLMs and RAG. When you reuse a code snippet from sources like Stack Overflow, GitHub, or AI models, WIRL automatically analyzes your local context and suggests the best variable mappings. It helps you replace unresolved variables with existing ones in your current scope with a single click, dramatically speeding up code reuse and integration.
+Tired of manually renaming variables after pasting code snippets? **WIRL** is an intelligent "Code Wiring" assistant powered by LLMs and RAG. When you reuse a code snippet from sources like Stack Overflow, GitHub, or AI models, WIRL automatically analyzes your local context and suggests the correct variable mappings. It helps you replace unresolved variables with existing ones in your current scope with a single click, dramatically speeding up code reuse and integration.
 
 ### The Problem: Why WIRL?
 
-Copy-paste-modify is an unavoidable reality in software development. However, over 85% of reused code snippets require manual adaptation before they can be integrated. The most time-consuming and error-prone part of this process is **variable adaptation**:
+Copy-paste-modify is an unavoidable practice in software development. However, over 85% of reused code snippets require manual adaptation before they can be integrated. A prevalent and error-prone part of this process is **variable adaptation**:
 
 *   **Compilation Errors:** Undeclared or conflicting variables lead to immediate build failures.
 *   **Logical Flaws:** Incorrect variable substitutions can introduce subtle, hard-to-find bugs.
@@ -19,7 +19,7 @@ Existing IDE features often rely on simple heuristics (e.g., name/type matching)
 WIRL introduces an innovative agent-based architecture that thinks and acts like an experienced developer:
 
 1.  **Auto-Detection:** Upon pasting code, WIRL instantly identifies all unresolved variables (the "unplugged wires").
-2.  **Context-Aware Analysis:** Leveraging **Retrieval-Augmented Generation (RAG)**, WIRL's agent iteratively and dynamically gathers the most relevant context from your local codebase (e.g., variable types, naming conventions, scope).
+2.  **Context-Aware Analysis:** Leveraging **Retrieval-Augmented Generation (RAG)**, WIRL's agent iteratively and dynamically gathers the most relevant context from your local codebase via static analysis.
 3.  **Intelligent Suggestions:** WIRL reframes the "variable mapping" task into a **"code completion"** task, which is a natural strength of LLMs. It treats unresolved variables as blanks to be filled, and by feeding the retrieved context to the LLM, it accurately suggests the most suitable local variables for replacement.
 
 This approach enables even smaller, distilled LLMs to achieve performance comparable to or even better than full-parameter LLMs on this task, striking the perfect balance between **accuracy** and **low latency**.
@@ -34,7 +34,7 @@ This approach enables even smaller, distilled LLMs to achieve performance compar
 *   💡 **Seamless Integration:** Seamless Integration:</strong> Works seamlessly within your IDEA workflow. Simply paste code, select method, and invoke WIRL via Right-Click.
 
 ### Getting Started
-** Search "WIRL" in IntelliJ IDEA Plugin Marketplace and Download it. **
+**Search "WIRL" in IntelliJ IDEA Plugin Marketplace and Download it.**
 1. Configure your LLM API key in <code> File | Settings | Tools | WIRL AI Settings</code>.</li>
 2. Copy a code snippet from any source and paste it into your editor.</li>
 3. Select an unresolved variable, Right-Click it, and select "WIRL: Map variables" to get suggestions.</li>
